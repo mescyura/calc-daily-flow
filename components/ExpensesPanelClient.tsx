@@ -641,7 +641,7 @@ export function ExpensesPanelClient(props: {
 										onChange={e =>
 											dispatch(dashboardActions.setFrom(e.target.value))
 										}
-										className='w-full min-w-0 max-w-full rounded-xl border border-zinc-300 bg-white px-3 py-2 pr-10 text-sm shadow-sm outline-none ring-1 ring-transparent transition-all duration-200 focus:border-zinc-400 focus:ring-black/10 dark:border-zinc-700 dark:bg-black dark:focus:border-zinc-600 dark:focus:ring-white/10'
+										className='w-full rounded-xl border border-zinc-300 bg-white px-3 py-2 pr-10 text-sm shadow-sm outline-none ring-1 ring-transparent transition-all duration-200 focus:border-zinc-400 focus:ring-black/10 dark:border-zinc-700 dark:bg-black dark:focus:border-zinc-600 dark:focus:ring-white/10'
 									/>
 									<button
 										type='button'
@@ -687,7 +687,7 @@ export function ExpensesPanelClient(props: {
 										onChange={e =>
 											dispatch(dashboardActions.setTo(e.target.value))
 										}
-										className='w-full min-w-0 max-w-full rounded-xl border border-zinc-300 bg-white px-3 py-2 pr-10 text-sm shadow-sm outline-none ring-1 ring-transparent transition-all duration-200 focus:border-zinc-400 focus:ring-black/10 dark:border-zinc-700 dark:bg-black dark:focus:border-zinc-600 dark:focus:ring-white/10'
+										className='w-full rounded-xl border border-zinc-300 bg-white px-3 py-2 pr-10 text-sm shadow-sm outline-none ring-1 ring-transparent transition-all duration-200 focus:border-zinc-400 focus:ring-black/10 dark:border-zinc-700 dark:bg-black dark:focus:border-zinc-600 dark:focus:ring-white/10'
 									/>
 									<button
 										type='button'
