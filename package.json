@@ -10,6 +10,7 @@
 	},
 	"dependencies": {
 		"@clerk/nextjs": "^7.2.0",
+		"@clerk/ui": "^1.6.1",
 		"@reduxjs/toolkit": "^2.11.2",
 		"@supabase/supabase-js": "^2.103.1",
 		"framer-motion": "^12.38.0",

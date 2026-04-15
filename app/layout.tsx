@@ -6,6 +6,7 @@ import './globals.css';
 import { HeaderActions } from '@/components/HeaderActions';
 import { PageMotion } from '@/components/MotionProviders';
 import { ReduxProvider } from '@/app/ReduxProvider';
+import { dark } from '@clerk/ui/themes';
 
 const geistSans = Geist({
 	variable: '--font-geist-sans',
@@ -28,7 +29,11 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<ClerkProvider>
+		<ClerkProvider
+			appearance={{
+				theme: dark,
+			}}
+		>
 			<html
 				lang='en'
 				className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
