@@ -56,7 +56,7 @@ export function Modal(props: {
         <motion.div
           className={
             props.overlayClassName ??
-            "fixed inset-0 z-50 flex items-start justify-center bg-black/40 px-4 py-6 backdrop-blur-sm sm:items-center sm:px-6"
+            "fixed inset-0 z-50 flex items-center justify-center bg-black/40 px-4 py-6 backdrop-blur-sm sm:px-6"
           }
           role="dialog"
           aria-modal="true"
