@@ -306,10 +306,10 @@ export function ExpensesPanelClient(props: {
 						<div className='text-xs font-medium text-zinc-600 dark:text-zinc-400'>
 							Категорія
 						</div>
-						<div className='mt-1 flex gap-2'>
+						<div className='mt-1 flex min-w-0 flex-col gap-2 sm:flex-row'>
 							<select
 								name='category_id'
-								className='w-full rounded-xl border border-zinc-300 bg-white px-3 py-2 text-sm shadow-sm outline-none ring-1 ring-transparent transition-all duration-200 focus:border-zinc-400 focus:ring-black/10 dark:border-zinc-700 dark:bg-black dark:focus:border-zinc-600 dark:focus:ring-white/10'
+								className='w-full min-w-0 rounded-xl border border-zinc-300 bg-white px-3 py-2 text-sm shadow-sm outline-none ring-1 ring-transparent transition-all duration-200 focus:border-zinc-400 focus:ring-black/10 dark:border-zinc-700 dark:bg-black dark:focus:border-zinc-600 dark:focus:ring-white/10'
 								required
 								value={selectedCategoryId}
 								disabled={pending || creatingCategory}
@@ -336,7 +336,7 @@ export function ExpensesPanelClient(props: {
 							</select>
 							<button
 								type='button'
-								className='shrink-0 rounded-xl border border-zinc-300 bg-white px-3 py-2 text-sm font-medium shadow-sm transition-all duration-200 hover:bg-zinc-50 dark:border-zinc-700 dark:bg-black dark:hover:bg-zinc-900'
+								className='w-full shrink-0 rounded-xl border border-zinc-300 bg-white px-3 py-2 text-sm font-medium shadow-sm transition-all duration-200 hover:bg-zinc-50 dark:border-zinc-700 dark:bg-black dark:hover:bg-zinc-900 sm:w-auto'
 								onClick={() =>
 									dispatch(dashboardActions.openManageCategories())
 								}
