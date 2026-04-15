@@ -60,7 +60,7 @@ export default function RootLayout({
 						</main>
 
 						<footer className='w-full border-t border-zinc-200 bg-white/50 backdrop-blur dark:border-zinc-800 dark:bg-black/20'>
-							<div className='mx-auto flex w-full max-w-5xl flex-col gap-2 px-4 py-4 text-xs text-zinc-500 dark:text-zinc-400 sm:flex-row sm:items-center sm:justify-between sm:px-6'>
+							<div className='mx-auto flex w-full max-w-5xl gap-2 px-4 py-4 text-xs text-zinc-500 dark:text-zinc-400 items-center justify-between sm:px-6'>
 								<div className='min-w-0 truncate'>
 									<span className='font-semibold'>© Calc DailyFlow</span>{' '}
 									{new Date().getFullYear()}
