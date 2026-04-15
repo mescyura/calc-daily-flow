@@ -1,0 +1,86 @@
+@import 'tailwindcss';
+
+:root {
+	--background: #ffffff;
+	--foreground: #171717;
+}
+
+@theme inline {
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--font-sans: var(--font-geist-sans);
+	--font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--background: #0a0a0a;
+		--foreground: #ededed;
+	}
+}
+
+body {
+	background: var(--background);
+	color: var(--foreground);
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Remove default number input spinners (Sum input) */
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+input[type='number'] {
+	-moz-appearance: textfield;
+	appearance: textfield;
+}
+
+@keyframes cdf-fade-up {
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes cdf-shimmer {
+	0% {
+		background-position: 200% 0;
+	}
+	100% {
+		background-position: -200% 0;
+	}
+}
+
+.cdf-animate-in {
+	animation: cdf-fade-up 480ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.cdf-delay-1 {
+	animation-delay: 60ms;
+}
+.cdf-delay-2 {
+	animation-delay: 120ms;
+}
+.cdf-delay-3 {
+	animation-delay: 180ms;
+}
+
+.cdf-shimmer {
+	background: linear-gradient(90deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.06));
+	background-size: 200% 100%;
+	animation: cdf-shimmer 1400ms ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.cdf-animate-in {
+		animation: none;
+	}
+	.cdf-shimmer {
+		animation: none;
+	}
+}
