@@ -1,0 +1,22 @@
+name: supabase-keepalive
+
+on:
+  schedule:
+    # Every 6 hours. Keeps the Supabase project from going fully inactive.
+    - cron: "0 */6 * * *"
+  workflow_dispatch: {}
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping app health endpoint
+        env:
+          HEALTHCHECK_URL: ${{ secrets.HEALTHCHECK_URL }}
+        run: |
+          if [ -z "$HEALTHCHECK_URL" ]; then
+            echo "Missing HEALTHCHECK_URL secret"
+            exit 1
+          fi
+          curl -fsS "$HEALTHCHECK_URL" > /dev/null
+
